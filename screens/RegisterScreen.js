@@ -41,6 +41,14 @@ const RegisterScreen = ({ navigation }) => {
           />
           {touched.name && errors.name && <Text style={styles.error}>{errors.name}</Text>}
           <TextInput
+            placeholder="Last Name"
+            style={styles.input}
+            onChangeText={handleChange('Lastname')}
+            onBlur={handleBlur('Lastname')}
+            value={values.name}
+          />
+          {touched.Lastname && errors.Lastname && <Text style={styles.error}>{errors.Lastname}</Text>}
+          <TextInput
             placeholder="Email"
             style={styles.input}
             onChangeText={handleChange('email')}
@@ -54,6 +62,15 @@ const RegisterScreen = ({ navigation }) => {
             style={styles.input}
             onChangeText={handleChange('password')}
             onBlur={handleBlur('password')}
+            value={values.password}
+            secureTextEntry
+          />
+          {touched.phone && errors.phone && <Text style={styles.error}>{errors.phone}</Text>}
+          <TextInput
+            placeholder="Phone"
+            style={styles.input}
+            onChangeText={handleChange('phone')}
+            onBlur={handleBlur('phone')}
             value={values.password}
             secureTextEntry
           />
